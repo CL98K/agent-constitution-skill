@@ -34,6 +34,7 @@ teammates: [] # team 模式按需列 id、task、status、evidence、retry_count
 ## 填写提示
 
 - 必须字段及取值按 `../SKILL.md` §7；不要在本模板或日志中另创状态 schema。
+- 时间及可能含 `: `、`#`、换行或类似布尔值的字符串应由序列化器正确转义；手写时使用引号。`- "命令结果: 5 tests passed"` 是字符串，`- 命令结果: 5 tests passed` 会成为映射。不会安全转义时可使用 JSON 对象放入 YAML 数据块；生成后仍须核对实际解析类型。
 - `accept` 逐条记录来源、执行者检查状态和证据。`passed` 表示检查通过，不代表用户已验收。
 - `flow` 是流程自检状态，与验收条件状态分开；证据不足时用 `unverified`。
 - 仅记录平台实际提供的团队信息；单 Agent 执行时 `teammates` 可为空。
@@ -62,7 +63,7 @@ doing: [检查现有校验实现]
 blocked: []
 risk: []
 next: [确认可用的针对性测试]
-updated_at: 2026-11-15T23:00:00+08:00
+updated_at: "2026-11-15T23:00:00+08:00"
 retry_total: 0
 teammates: []
 ```
