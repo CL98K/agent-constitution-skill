@@ -33,7 +33,7 @@
 
 修改规则时同步受影响模板，使用 [交付前自检](agent-constitution/references/self-check.md) 核查引用和行为一致性。运行期状态/日志不属于 Skill 分发文件；默认不提交。
 
-[2.0.1 场景验证记录](verification/2026-11-16.md) 列出 30 个场景的实际执行、模拟与未验证项，以及试跑发现的 SCAN、状态序列化和异常示例修正。它是本次验证记录，不是所有模型和平台的执行保证。
+[2.0.1 第一轮场景验证记录](verification/2026-11-16.md) 列出 30 个场景的实际执行、模拟与未验证项，以及试跑发现的 SCAN、状态序列化和异常示例修正。第二轮补测与最小原则边界审阅见 [计划](verification/2026-11-16-round2-plan.md) 和 [结果](verification/2026-11-16-round2-results.md)，包含平台限制、未测场景及 v2.0.2 规则澄清。两轮均是有限条件下的验证记录，不保证所有模型和平台一致执行。
 
 本次格式依据：[AGENTS.md 开放格式](https://agents.md/)（标准 Markdown，无必填字段，支持目录作用域）与 [Agent Skills 规范](https://agentskills.io/specification)（必需名称/描述、相对资源引用和按需加载）。`temp/` 为合法附加目录，保留原有名称以避免无意义迁移。
 
